@@ -1,4 +1,6 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+import 'package:artset/shared/menu_bottom.dart';
+import 'package:artset/shared/menu_drawer.dart';
 import 'package:flutter/material.dart';
 
 class homePage extends StatelessWidget {
@@ -7,9 +9,11 @@ class homePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MenuDrawer(),
       appBar: AppBar(
         title: const Text("ArtSet"),
       ),
+      bottomNavigationBar: menu_bottom(),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
