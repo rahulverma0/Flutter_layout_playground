@@ -15,6 +15,13 @@ class ArtSet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.indigo,
+        textTheme: TextTheme(
+          bodyText2: TextStyle(fontSize: 24),
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       routes: {
         "/": (context) => homePage(),
@@ -22,9 +29,7 @@ class ArtSet extends StatelessWidget {
         "/bmi": (context) => BmiScreen(),
       },
       initialRoute: "/",
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-      ),
+
       //home: homePage(),
     );
   }

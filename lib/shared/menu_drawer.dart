@@ -3,6 +3,7 @@
 import 'package:artset/screens/bmi_screen.dart';
 import 'package:artset/screens/editor_screen.dart';
 import 'package:artset/screens/home_page.dart';
+import 'package:artset/screens/scaffold_example.dart';
 import 'package:artset/screens/sessions_screen.dart';
 import 'package:artset/screens/weather_screen.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +27,7 @@ class MenuDrawer extends StatelessWidget {
       "BMI",
       "Weather",
       "Sessions",
+      "Scaffold",
       "About",
     ];
     List<Widget> menuItems = [];
@@ -64,6 +66,9 @@ class MenuDrawer extends StatelessWidget {
                 break;
               case "Sessions":
                 screen = SessionScreen();
+                break;
+              case "Scaffold":
+                screen = ScaffoldExample();
                 break;
             }
             Navigator.of(context).pop();
